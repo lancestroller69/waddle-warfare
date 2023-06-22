@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyp8td1wyq584"]
+
+[ext_resource type="PackedScene" uid="uid://b5rriwodqh3y" path="res://player.tscn" id="1_qqlp3"]
+[ext_resource type="Script" path="res://player.cs" id="2_jkruv"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("1_qqlp3")]
+position = Vector2(-2, -15)
+script = ExtResource("2_jkruv")
+metadata/Transform = Transform2D(1, 0, 0, 1, 0, 0)
+
+[node name="CollisionShape2D" parent="Player/RigidBody2D" index="0"]
+visible = false
+
+[editable path="Player"]
